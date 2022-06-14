@@ -107,7 +107,7 @@ public class WatermelonServiceImpl implements FruitService {
 
 > 由此可看出map与list装配成功，但其实现类装配失败。
 
-![image-20220513131118094](知识笔记-Spring装配Map、List原理.assets/image-20220513131118094.png)
+![image-20220513131118094](./知识笔记-Spring装配Map、List原理.assets/image-20220513131118094.png)
 
 > 往堆栈上方寻找，由此可看出：
 >
@@ -116,43 +116,43 @@ public class WatermelonServiceImpl implements FruitService {
 >
 > beanName="fruitFactory"，装填参数仅部分存在值
 
-![image-20220513131420659](知识笔记-Spring装配Map、List原理.assets/image-20220513131420659.png)
+![image-20220513131420659](./知识笔记-Spring装配Map、List原理.assets/image-20220513131420659.png)
 
 > 在ConstructorResolver.autowireConstructor中加入断点，判断值"fruitFactory".equals(beanName)
 
-![image-20220513132045435](知识笔记-Spring装配Map、List原理.assets/image-20220513132045435.png)
+![image-20220513132045435](./知识笔记-Spring装配Map、List原理.assets/image-20220513132045435.png)
 
 > 进行装配的值args，来自argsHolder.arguments。argsHolder.arguments来自，本类的createArgumentArray(
 > 			String beanName, RootBeanDefinition mbd, @Nullable ConstructorArgumentValues resolvedValues,
 > 			BeanWrapper bw, Class<?>[] paramTypes, @Nullable String[] paramNames, Executable executable,
 > 			boolean autowiring, boolean fallback)方法。
 
-![image-20220513132703691](知识笔记-Spring装配Map、List原理.assets/image-20220513132703691.png)
+![image-20220513132703691](./知识笔记-Spring装配Map、List原理.assets/image-20220513132703691.png)
 
 > 在ConstructorResolver.createArgumentArray方法中resolveAutowiredArgument(MethodParameter param, String beanName,
 > 			@Nullable Set<String> autowiredBeanNames, TypeConverter typeConverter, boolean fallback)对需要注入的参数进行注入
 
-![image-20220513133137337](知识笔记-Spring装配Map、List原理.assets/image-20220513133137337.png)
+![image-20220513133137337](./知识笔记-Spring装配Map、List原理.assets/image-20220513133137337.png)
 
 > 经由beanFactory.resolveDependency注入，使用DefaultListableBeanFactory进行实现
 
-![image-20220513133354047](知识笔记-Spring装配Map、List原理.assets/image-20220513133354047.png)
+![image-20220513133354047](./知识笔记-Spring装配Map、List原理.assets/image-20220513133354047.png)
 
 > 通过doResolveDependency(descriptor, requestingBeanName, autowiredBeanNames, typeConverter)进入
 
-![image-20220513133725008](知识笔记-Spring装配Map、List原理.assets/image-20220513133725008.png)
+![image-20220513133725008](./知识笔记-Spring装配Map、List原理.assets/image-20220513133725008.png)
 
 > 由resolveMultipleBeans进行属性填充
 
-![image-20220513134032593](知识笔记-Spring装配Map、List原理.assets/image-20220513134032593.png)
+![image-20220513134032593](./知识笔记-Spring装配Map、List原理.assets/image-20220513134032593.png)
 
 核心：
 
 > org.springframework.beans.factory.support.DefaultListableBeanFactory#resolveMultipleBeans
 
-![image-20220513134413490](知识笔记-Spring装配Map、List原理.assets/image-20220513134413490.png)
+![image-20220513134413490](./知识笔记-Spring装配Map、List原理.assets/image-20220513134413490.png)
 
-![image-20220513134221966](知识笔记-Spring装配Map、List原理.assets/image-20220513134221966.png)	
+![image-20220513134221966](./知识笔记-Spring装配Map、List原理.assets/image-20220513134221966.png)	
 
 由源码可看出，对于map类型，只对Map接口进行属性赋值，对其实现类不会进行赋值，对于list也是同理
 
@@ -164,4 +164,4 @@ Map<String, Object> result = CollectionUtils.newLinkedHashMap(candidateNames.len
 
 # 4、总结
 
-以上为大致内容，水平有限，敬请谅解，项目已上传至gitee。https://gitee.com/NIRLIN/Labs
+以上为大致内容，水平有限，敬请谅解，项目已上传至github。https://github.com/NIRLIN/Labs

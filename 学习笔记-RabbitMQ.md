@@ -115,13 +115,13 @@ rabbitmq-plugins enable rabbitmq_management
 >
 > 密码：guest
 
-![image-20201115133750035](学习笔记-RabbitMQ.assets/image-20201115133750035.png)
+![image-20201115133750035](./学习笔记-RabbitMQ.assets/image-20201115133750035.png)
 
 
 
 ## 2.RabbitMQ工作原理
 
-![image-20201115154302112](学习笔记-RabbitMQ.assets/image-20201115154302112.png)
+![image-20201115154302112](./学习笔记-RabbitMQ.assets/image-20201115154302112.png)
 
 
 
@@ -310,7 +310,7 @@ public class Consumer01 {
 
 做某事 的最简单的事情
 
-![img](学习笔记-RabbitMQ.assets/python-one.png)
+![img](./学习笔记-RabbitMQ.assets/python-one.png)
 
 
 
@@ -320,7 +320,7 @@ public class Consumer01 {
 
 在工人之间分配任务（竞争的消费者模式）
 
-![img](学习笔记-RabbitMQ.assets/python-two.png)
+![img](./学习笔记-RabbitMQ.assets/python-two.png)
 
 - 一个生产者将消息发送给一个队列
 - 多个消费者共同监听一个队列的消息
@@ -337,7 +337,7 @@ public class Consumer01 {
 
 一次向许多消费者发送消息
 
-![img](学习笔记-RabbitMQ.assets/python-three.png)
+![img](./学习笔记-RabbitMQ.assets/python-three.png)
 
 发布/订阅模式：
 
@@ -457,7 +457,7 @@ public class Consumer02SubscribeEmail {
 
 有选择地接收消息
 
-![img](学习笔记-RabbitMQ.assets/python-four.png)
+![img](./学习笔记-RabbitMQ.assets/python-four.png)
 
 路由模式：
 
@@ -477,7 +477,7 @@ Routing 模式和Publish/Subscribe模式有什么区别：
 
 根据模式（主题）接收消息
 
-![img](学习笔记-RabbitMQ.assets/python-five.png)
+![img](./学习笔记-RabbitMQ.assets/python-five.png)
 
 通配符模式：
 
@@ -499,7 +499,7 @@ Topics与Routing的区别：
 
 请求/回复模式示例
 
-![img](学习笔记-RabbitMQ.assets/python-six.png)
+![img](./学习笔记-RabbitMQ.assets/python-six.png)
 
 RPC即客户端远程调用服务端的方法，使用MQ可以实现RPC的异步调用，基于Direct交换机实现，流程如下：
 
