@@ -26,17 +26,17 @@ https://www.bilibili.com/video/BV1RY4y1v7mN
 
 最上层进行接口定义
 
-![image-20220614141216148](./学习笔记-Java SPI.assets/image-20220614141216148.png)
+![image-20220614141216148](images/image-20220614141216148.png)
 
 ## Lab-02-Service-Provider-A
 
 接口实现
 
-![image-20220614141232901](./学习笔记-Java SPI.assets/image-20220614141232901.png)
+![image-20220614141232901](images/image-20220614141232901.png)
 
 根据规则定义实现接口
 
-![image-20220614141315167](./学习笔记-Java SPI.assets/image-20220614141315167.png)
+![image-20220614141315167](images/image-20220614141315167.png)
 
 **services中文件名为接口全限定名，文件内容为实现类全限定名。**
 
@@ -48,11 +48,11 @@ Lab-02-Service-Provider-B与Lab-02-Service-Provider-A相似
 
 引入具体实现包
 
-![image-20220614141530155](./学习笔记-Java SPI.assets/image-20220614141530155.png)
+![image-20220614141530155](images/image-20220614141530155.png)
 
 通过**ServiceLoader**加载具体实现
 
-![image-20220614141617324](./学习笔记-Java SPI.assets/image-20220614141617324.png)![image-20220614141635449](./学习笔记-Java SPI.assets/image-20220614141635449.png)
+![image-20220614141617324](images/image-20220614141617324.png)![image-20220614141635449](images/image-20220614141635449.png)
 
 
 
