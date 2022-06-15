@@ -601,7 +601,7 @@ Docker容器：容器就是镜像运行起来，提供服务器
 
 参考文章：https://www.cnblogs.com/edisonchou/p/dockerfile_inside_introduction.html
 
-![img](images/450977-20190512115951746-136143052.png)
+![img](images/image-2020111136143052.png)
 
 
 
