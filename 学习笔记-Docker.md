@@ -151,7 +151,7 @@ rm -rf /var/lib/docker
 
 #### 5.配置使用
 
-![image-20201003161045315](学习笔记-Docker.assets/image-20201003161045315.png)
+![image-20201003161045315](images/image-20201003161045315.png)
 
 ```shell
 sudo mkdir -p /etc/docker
@@ -176,7 +176,7 @@ sudo systemctl restart docker
 
 **文档地址：https://docs.docker.com/reference/**
 
-[![image-20201004151032165](学习笔记-Docker.assets/image-20201004151032165.png)]()
+[![image-20201004151032165](images/image-20201004151032165.png)]()
 
 ### 1.帮助命令
 
@@ -533,7 +533,7 @@ docker volume inspect 挂载名
 
 ```
 
-![image-20201008093753831](学习笔记-Docker.assets/image-20201008093753831.png)
+![image-20201008093753831](images/image-20201008093753831.png)
 
 
 
@@ -601,7 +601,7 @@ Docker容器：容器就是镜像运行起来，提供服务器
 
 参考文章：https://www.cnblogs.com/edisonchou/p/dockerfile_inside_introduction.html
 
-![img](学习笔记-Docker.assets/450977-20190512115951746-136143052.png)
+![img](images/450977-20190512115951746-136143052.png)
 
 
 
